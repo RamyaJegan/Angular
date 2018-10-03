@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./datatable/jquery.dataTables.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="http://benalman.com/code/projects/jquery-throttle-debounce/jquery.ba-throttle-debounce.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="./datatable/jquery.dataTables.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>      <title>HCI</title>
+      <link href="dispatch_details.css" rel="stylesheet" />
+      <script src="dispatch_details.js"></script>
+   </head>
+   <body>
+      <!-- HEADING -->
+      <div id="single_header">
+        <span class="arrow" onclick="window.history.back();">
+          <img src="images/arrow.svg">
+        </span>
+         <span class="head">Dispatch / Details</span>
+     </div>
+     <!-- REQUIRED BOQ-->
+     <div class="inner_row">
+       <div class="header">
+         <div class="head"> Requirement BOQ</div>  
+         <div class="pull-right"> 
+            <button class="app_rem_btn approve" id="app_btn" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#myModal">APPROVE</button>  
+            <button class="app_rem_btn remove" id="rem_btn" data-toggle="modal" data-target="#myModal">reject</button>            
+         </div>         
+       </div>
+       <div class="body">
+         <div class="col-sm-3">
+           <div class="head">
+              Dispatch Advice Number  
+              <div class="body_val">
+                  5856586582596
+              </div>             
+           </div>               
+          </div>
+          <div class="col-sm-3">
+           <div class="head">
+              Created Date
+              <div class="body_val">
+                  12/05/2018
+              </div>   
+           </div></div> 
+           <div class="col-sm-3"> 
+           <div class="head">
+              Number of Panels
+              <div class="body_val">
+                  1024
+              </div>   
+           </div> </div> 
+           <div class="col-sm-3">
+            <div class="head">
+              Status
+              <div class="body_val">
+                  To Be Approved
+              </div>  
+            </div>     
+           </div>
+           <div class="col-sm-3">
+              <div class="head">
+                  Dispatch BOQ #  
+                 <div class="body_val">
+                     8755658652596
+                 </div>             
+              </div>               
+             </div>
+             <div class="col-sm-3">
+              <div class="head">
+                 From
+                 <div class="body_val">
+                    Vandor - Industrial and Business Park
+                 </div>   
+              </div></div> 
+              <div class="col-sm-3"> 
+              <div class="head">
+                 To
+                 <div class="body_val">
+                    Site - Radhadaya Complex
+                 </div>  
+              </div> 
+          </div>
+          <div class="col-sm-12" id="notes-dis"> 
+            <div class="head">
+                Note
+                <div class="body_val" id='note_val'>
+                 
+                </div>  
+            </div>
+          </div>
+     </div>
+     </div>
+     <!-- STANDARD AND NON STANDARD TAB -->
+     <div class="menu">
+        <div class="data_row">
+
+           <!-- TAB'S -->
+
+            <ul class="nav nav-tabs">
+               <li  class="tab-custom active"><a data-toggle="tab" href="#stand" class="item_type_tab">STANDARD</a></li>
+               <li  class="tab-custom"><a data-toggle="tab" href="#stand" class="item_tab">NON STANDARD</a></li>
+            </ul>
+            <div class="tab-content">
+            <div id="stand" class="tab-pane fade in active">
+             <!-- SELECT ALL CHECKBOX -->
+
+            <div class="select_all">
+                <label class="container">Select All
+                <input type="checkbox" value="Select All"> 
+                <span class="checkmark"></span></label>
+            </div>
+
+             <!-- CHECKBOX DATA -->
+            <div class="check_data">
+            
+          </div>
+            
+            
+            <!-- POPOVER WHILE CLICKING ON ICON SYMBOL IN CHECKBOX -->
+          <div class="pop">
+            
+          </div>
+            
+          </div>
+          <div id="non_stand" class="tab-pane fade">
+           
+          </div>
+        </div>
+         </div>
+         
+   <!-- APPROVE ADD NOTES POPUP -->
+    
+   <!-- Modal -->
+   <div class="modal fade" id="myModal" role="Add and Remove note">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">Cancel</button>
+            <div class="modal-title required">Notes</div>
+          </div>
+          <div class="modal-body">
+              <input type="text" class="notes_text" id="note">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="add_note">Approve</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="rej_note">Reject</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+     <!-- CHECKBOX IMAGE DISPLAY POPUP -->
+    <div class="pop_on_checkbox">
+   
+    </div>
+ 
+      <!-- HISTORY POPUP -->
+    
+               <!-- Modal -->
+       <div class="modal fade" id="his_pop" role="history popup">
+          <div class="modal-dialog">      
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">Cancel</button>
+                  <div class="modal-title font-style" >HISTORY</div>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                 </div>
+              </div>
+              
+            </div>   
+       </div>
+
+</div>
+</body>
+</html>

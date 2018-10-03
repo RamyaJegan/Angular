@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nalli</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+     
+      @font-face {
+        font-family: 'SourceSansProRegular';
+    src: url('css1/fonts/SourceSansProRegular.eot');
+    src: url('css1/fonts/SourceSansProRegular.eot') format('embedded-opentype'),
+         url('css1/fonts/SourceSansProRegular.woff2') format('woff2'),
+         url('css1/fonts/SourceSansProRegular.woff') format('woff'),
+         url('css1/fonts/SourceSansProRegular.ttf') format('truetype'),
+         url('css1/fonts/SourceSansProRegular.svg#SourceSansProRegular') format('svg');
+    }
+@media (min-width: 1200px){
+.container {
+    width: 1170px;
+    margin-top: -23px;
+    margin-bottom: 15px;
+}
+}
+.body{
+  font-family: 'SourceSansProRegular';
+}
+   .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      padding-right:200px;
+    }
+    .header .navbar{
+      
+      margin-bottom: 0;
+      border-radius: 0;
+      padding-top:15px;
+      padding-bottom:15px;
+      background-color:#fff;
+      
+    }
+    .navbar-inverse .navbar-nav>li>a{
+         font-family: "SourceSansProRegular";
+         
+    }
+    .header .navbar-inverse .navbar-nav>li>a{
+        color: black;
+        font-style: bold;
+        font-family: "SourceSansProRegular";
+        margin-left: 15px;
+    }
+    .header .navbar-inverse:hover .navbar-nav>li>a {
+       color:black;
+        font-family: "SourceSansProRegular";
+    }
+   
+    .align{
+        float:left;
+        margin-left: 42px;
+    }
+
+     #button-holder{
+       background-color:#f1f1f1;
+       border-top:thin solid #e5e5e5;
+       box-shadow:1px 1px 1px 1px #e5e5e5;
+       cursor:pointer;
+       float:left;
+       height:30px;
+       margin-top: 10px;
+       margin-bottom:10px; 
+       text-align:center;
+       width:50px;
+     }
+     #button-holder img{
+       margin:4px;
+       width:20px; 
+     }
+     #likes{
+       float:left;
+       height:20px;
+       margin-top: 10px;
+       margin-bottom:10px;
+       margin-left:20px;
+       text-align:center;
+        width:20px;
+     }
+  
+     #cart img{
+        margin:4px;
+        width:25px; 
+        height:22px;
+     }
+     #cart{
+       float:left;
+       height:10px;
+       margin-top: 10px;
+       margin-bottom:10px;
+       margin-left:20px;
+       text-align:center;
+       width:20px;
+     }
+  
+     #profile img{
+       margin:4px;
+       width:30px; 
+       border-radius: 50%;
+       height:25px;
+     }
+     #profile{
+       float:left;
+       height:20px;
+       margin-top: 10px;
+       margin-bottom:10px;
+       margin-left:20px;
+       text-align:center;
+       width:20px;
+     }  
+     #likes img{
+       margin:4px;
+       width:40px; 
+     }
+     #search-text-input{
+         margin-top: 10px;
+         margin-bottom:10px;
+         margin-left: 80px;
+         border-top:thin solid  #e5e5e5;
+         border-right:thin solid #e5e5e5;
+         border-bottom:0;
+         border-left:thin solid  #e5e5e5;
+         box-shadow:0px 1px 1px 1px #e5e5e5;
+         float:left;
+         color:black;
+         font-family: "SourceSansProRegular";
+         width:250px;
+         height: 30px;
+         padding: 0px;
+         font-size: 15px;  
+       }
+    .col-sm-2{
+        background-color: white;
+    }
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    .footer .navbar{
+      padding-left: 350px;
+      margin-bottom: 0;
+      border-radius: 0;
+      padding-right:200px;
+      padding-top:15px;
+      padding-bottom:15px;
+      background-color: rgb(235, 232, 232);
+      
+    }
+    .text-center{
+      font-family: "SourceSansProRegular";
+      text-align:center;
+    }
+    /* Set black background color, white text and some padding */
+    footer {
+      
+      background-color: rgb(235, 232, 232);
+      color: white;
+      padding: 15px;
+    }
+    #myNavbar{
+        float:right;
+    }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+    * {
+    box-sizing: border-box;
+}
+.h2 {
+   width: 100%; 
+
+   text-align: center; 
+   border-bottom: 1px solid #555; 
+   line-height: 0.5em;
+   font-size:18px;
+  margin-top:20px;
+   margin-bottom:20px;
+   font-family: "SourceSansProRegular";
+    
+} 
+.h2 span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+
+#slider-text{
+  padding-top: 40px;
+  display: block;
+  text-align: center;
+}
+#slider-text .col-md-6{
+  overflow: hidden;
+}
+
+#slider-text h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin: 30px auto;
+  padding-left: 40px;
+}
+
+#myCarousel h4{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 10px auto 3px;
+}
+#myCarousel h5{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 3px auto 2px;
+}
+#myCarousel h6{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;;
+  font-size: 10px;
+  margin: 2px auto 5px;
+}
+.badge {
+  background: #b20c0c;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  line-height: 31px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  border: 2px solid #FFF;
+  box-shadow: 0 0 0 1px #b20c0c;
+  top: 5px;
+  right: 25%;
+}
+#slider-control img{
+  padding-top: 60%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 992px){
+#slider-control img {
+  padding-top: 70px;
+  margin: 0 auto;
+}
+}
+.col-md-2 {
+    width: 33.333%;
+    height:350px;
+    object-fit: fill;
+  overflow: hidden;
+  transition: 1s all;
+}
+.col-md-4 {
+    width: 25%;
+    
+    object-fit: fill;
+  overflow: hidden;
+  transition: 1s all;
+}
+.col-sm-6 {
+    width: 33.333%;
+    height:350px;
+    
+    object-fit: fill;
+  overflow: hidden;
+  transition: 1s all;
+}
+.col-xs-12 {
+    position: relative;
+   height:300px;
+    object-fit: fill;
+  overflow: hidden;
+  transition: 1s all;
+}
+.likes1{
+  
+  float:right;
+  width:20px;
+  height:20px;
+ 
+    text-align:center;
+
+}
+.cart1{
+  position:absolute;
+  float:left;
+  width:20px;
+  height:20px;
+
+}
+  .img-responsive{
+  height:250px;
+  object-fit: fill;
+  overflow: hidden;
+  transition: 1s all;
+}
+.img-responsive1{
+  height:90px;
+  padding-top:50%;
+  object-fit: fill;
+  overflow: hidden;
+  transition: 1s all;
+}
+
+.multi-item-carousel .carousel-control {
+  width: 4%;
+  background-image: none;
+}
+.multi-item-carousel .carousel-control.left {
+  margin-left: 5px;
+}
+.multi-item-carousel .carousel-control.right {
+  margin-right: 5px;
+}
+.multi-item-carousel .cloneditem-1,
+.multi-item-carousel .cloneditem-2,
+.multi-item-carousel .cloneditem-3,
+.multi-item-carousel .cloneditem-4,
+.multi-item-carousel .cloneditem-5 {
+  display: none;
+}
+@media all and (min-width: 768px) {
+  .multi-item-carousel .carousel-inner > .active.left,
+  .multi-item-carousel .carousel-inner > .prev {
+    left: -50%;
+  }
+  .multi-item-carousel .carousel-inner > .active.right,
+  .multi-item-carousel .carousel-inner > .next {
+    left: 50%;
+  }
+  .multi-item-carousel .carousel-inner > .left,
+  .multi-item-carousel .carousel-inner > .prev.right,
+  .multi-item-carousel .carousel-inner > .active {
+    left: 0;
+  }
+  .multi-item-carousel .carousel-inner .cloneditem-1 {
+    display: block;
+  }
+}
+@media all and (min-width: 768px) and (transform-3d), all and (min-width: 768px) and (-webkit-transform-3d) {
+  .multi-item-carousel .carousel-inner > .item.active.right,
+  .multi-item-carousel .carousel-inner > .item.next {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    left: 0;
+  }
+  .multi-item-carousel .carousel-inner > .item.active.left,
+  .multi-item-carousel .carousel-inner > .item.prev {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+    left: 0;
+  }
+  .multi-item-carousel .carousel-inner > .item.left,
+  .multi-item-carousel .carousel-inner > .item.prev.right,
+  .multi-item-carousel .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    left: 0;
+  }
+}
+@media all and (min-width: 992px) {
+  .multi-item-carousel .carousel-inner > .active.left,
+  .multi-item-carousel .carousel-inner > .prev {
+    left: -16.666%;
+  }
+  .multi-item-carousel .carousel-inner > .active.right,
+  .multi-item-carousel .carousel-inner > .next {
+    left: 16.666%;
+  }
+  .multi-item-carousel .carousel-inner > .left,
+  .multi-item-carousel .carousel-inner > .prev.right,
+  .multi-item-carousel .carousel-inner > .active {
+    left: 0;
+  }
+  .multi-item-carousel .carousel-inner .cloneditem-2,
+  .multi-item-carousel .carousel-inner .cloneditem-3,
+  .multi-item-carousel .carousel-inner .cloneditem-4,
+  .multi-item-carousel .carousel-inner .cloneditem-5,
+  .multi-item-carousel .carousel-inner .cloneditem-6  {
+    display: block;
+  }
+}
+.footer .a{
+  text-align:center;
+  color:#777;
+  font-size:10px;
+  margin-right:10px;
+}
+.footer span a{
+  font-family: "SourceSansProRegular";
+  text-align:center;
+  color:#777;
+  font-size:8px;
+  margin-right:10px;
+}
+.footer span {
+  font-family: "SourceSansProRegular";
+  text-align:center;
+  color:#777;
+  font-size:8px;
+  
+}
+.footer .left{
+  font-family: "SourceSansProRegular";
+  float:right;
+  text-align:center;
+  color:#777;
+  font-size:8px;
+ 
+}
+.footer .social{
+  font-family: "SourceSansProRegular";
+ 
+  
+  color:#777;
+  
+  width:30px;
+ height:20px;
+}
+.footer .right{
+  font-family: "SourceSansProRegular";
+  float:right;
+  text-align:center;
+  color:#777;
+  font-size:10px;
+  margin-right:10px;
+}
+@media (min-width: 768px){
+.footer .navbar-nav>li>a {
+  
+    margin-right: -23px;
+}
+}
+.col-sm-2{
+  background-color: #fff;
+}
+#banner{
+  float:right;
+  margin-top: 3px;
+  margin-right:470px;
+  margin-left:370px;
+  padding-top:30px;
+  padding-right:80px;
+  padding-bottom:30px;
+ 
+  height:360px;
+  width:550px;
+  object-fit: fill;
+  overflow: hidden;
+  transition: 1s all;
+  
+
+}
+#banner1{
+  float:right;
+  margin-top: 3px;
+  margin-right:370px;
+  margin-left:370px;
+  padding-top:100px;
+  padding-right:80px;
+  padding-left:50px;
+  padding-bottom:100px;
+  color:#297;;
+  font-size:30px;
+  text-indent: 9999;
+  height:360px;
+  width:550px;
+  object-fit: fill;
+  overflow: hidden;
+  transition: 1s all;
+  
+
+}
+.img-r{
+  width:15px;
+  height:10px;
+  object-fit: fill;
+  overflow: hidden;
+  transition: 1s all;
+}
+.footer .navbar-inverse .navbar-nav>li>a{
+ color: rgb(235, 232, 232);
+        font-style: bold;
+        font-family: "SourceSansProRegular";
+        margin-left: 15px;
+    }
+    .footer .navbar-inverse:hover .navbar-nav>li>a {
+      color: rgb(235, 232, 232);
+        font-family: "SourceSansProRegular";
+    }
+  .footer  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: rgb(235, 232, 232);
+}
+@media all and (min-width: 992px) and (transform-3d), all and (min-width: 992px) and (-webkit-transform-3d) {
+  .multi-item-carousel .carousel-inner > .item.active.right,
+  .multi-item-carousel .carousel-inner > .item.next {
+    -webkit-transform: translate3d(16.666%, 0, 0);
+    transform: translate3d(16.666%, 0, 0);
+    left: 0;
+  }
+  .multi-item-carousel .carousel-inner > .item.active.left,
+  .multi-item-carousel .carousel-inner > .item.prev {
+    -webkit-transform: translate3d(-16.666%, 0, 0);
+    transform: translate3d(-16.666%, 0, 0);
+    left: 0;
+  }
+  .multi-item-carousel .carousel-inner > .item.left,
+  .multi-item-carousel .carousel-inner > .item.prev.right,
+  .multi-item-carousel .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    left: 0;
+  }
+}
+svg{
+  width:100%;
+  height:100%;
+  visibility:hidden;
+ 
+}
+text {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+#hit{
+  cursor:pointer;
+  
+}
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function(){
+  
+  $('#myCarousel').carousel({ interval: 3000 });
+  
+  $('.multi-item-carousel .item').each(function(){
+  var itemToClone = $(this);
+  
+  for (var i=1;i<6;i++) {
+  itemToClone = itemToClone.next();
+  
+  if (!itemToClone.length) {
+  itemToClone = $(this).siblings(':first');
+  }
+  
+  itemToClone.children(':first-child').clone()
+  .addClass("cloneditem-"+(i))
+  .appendTo($(this));
+  }
+  });
+  });
+  
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Nalli Thumbnail</a></li>
+        <li><a href="#">Voucher</a></li>
+        <li><a href="#">Contact us</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="header">
+    
+        <nav class="navbar navbar-inverse">
+            
+                <div class="container-fluid">
+                  <div class="align"><img src="nalli.jpg" width="65px" height="50px" ></div>
+                    
+                  <div class="collapse navbar-collapse">
+                      
+                    <ul class="nav navbar-nav">
+                      <li><a href="#"><b>WOMEN</b></a></li>
+                      <li><a href="#"><b>MEN</b></a></li>
+                      <li><a href="#"><b>BABY & KIDS</b></a></li>
+                      <li><a href="#"><b>HOME FASHION</b></a></li>
+                      <li><a href="#"><b>OFFERS</b></a></li>
+                     
+                    </ul>
+                    <input type="text" placeholder="  Search" class="mainLoginInput" id='search-text-input'/>
+                    <div id='button-holder'>
+                        <img src='l3.png' />
+                    </div>
+                    <div id='likes'><a href="#"><img src="l2.png"></a></div>
+                    <div id='cart'><a href="#"><img src="l1.png"></a></div>
+                    <div id='profile'><a href="#"><img src="profile.jpg"></a></div>
+                  </div>
+                 
+                 
+                </div>
+              </nav>
+</header>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  
+    
+
+   <div class="carousel-inner" role="listbox" id="banner">
+   <div class="item active">
+     <img src="j1.jpg" alt="Image">
+      
+   </div>
+
+  
+ 
+ </div>
+ <div class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="banner1">
+  <span>NOW A WIDE<br>RANGE OF<br><font color="red">KURTIS </font>TO<br>CHOOSE FROM!</span>
+ </div>
+   <div class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="banner1">
+     
+   </div>
+  </div>
+
+
+  
+  <div class="container-fluid">
+  
+      <div class="container-fluid text-center">    
+          <div class="row content">
+              <div class="container">
+                  <div class="row" id="slider-text">
+                    <div class="col-md-12" >
+                       <DIV CLASS="h2"><span>TRENDING NOW</span></DIV> 
+                    </div>
+                  </div>
+                </div>
+            <div class="col-sm-2">
+             
+            </div>
+            <div class="col-sm-8 text-left"> 
+              
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="carousel multi-item-carousel" id="myCarousel" data-ride="carousel">
+          <div class="carousel-inner">
+  
+            <div class="item active">
+              <div class="col-xs-12 col-sm-6 col-md-2">
+                <a href="#"><img src="p1.jpg" class="img-responsive center-block"></a>
+                <h4 class="text-center">Red Dotted Dress</h4>
+                <h5 class="text-center">Rs. 500</h5>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="col-xs-12 col-sm-6 col-md-2">
+                <a href="#"><img src="p2.jpeg" class="img-responsive center-block"></a>
+                <h4 class="text-center">Magenta Floral Dress</h4>
+                <h5 class="text-center">Rs. 2500</h5>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="col-xs-12 col-sm-6 col-md-2">
+                <a href="#"><img src="p3.jpg" class="img-responsive center-block"></a>
+                <span class="badge">
+                                  </span>
+                <h4 class="text-center">Stylish Green shirt</h4>
+                <h5 class="text-center">Stylish Green shirt</h5>
+                <h6 class="text-center">Rs. 3000</h6>
+              </div>
+            </div>
+  
+       
+  
+          </div>
+  
+          <div id="slider-control">
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev"><img src="r1.png" alt="Left" class="img-responsive1"></a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next"><img src="r2.png" alt="Right" class="img-responsive1"></a>
+        </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    <div class="container">
+        <div class="row" id="slider-text">
+          <div class="col-md-12" >
+             <DIV CLASS="h2"><span>NEW ARRIVALS</span></DIV> 
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+                 
+        </div>
+     <div class="col-sm-8 text-left"> 
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="carousel multi-item-carousel " id="myCarousel" data-ride="carousel">
+              <div class="carousel-inner">
+      
+                <div class="item active">
+                  <div class="col-xs-12 col-sm-1 col-md-4">
+                    <a href="#"><img src="p4.jpg" class="img-responsive center-block"></a>
+                    <span class="badge">20%</span>
+                    <h4 class="text-center">Red Dotted Dress</h4>
+                    <h5 class="text-center">Rs. 500</h5>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="col-xs-12 col-sm-1 col-md-4">
+                    <a href="#"><img src="p5.jpg" class="img-responsive center-block"></a>
+                    <h4 class="text-center">Magenta Floral Dress</h4>
+                    <h5 class="text-center">Rs. 2500</h5>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="col-xs-12 col-sm-1 col-md-4">
+                    <a href="#"><img src="p6.jpg" class="img-responsive center-block"></a>
+                    <span class="badge">20%</span>
+                    <h4 class="text-center">Stylish Green shirt</h4>
+                    <h5 class="text-center">Rs. 3000</h5>
+                  </div>
+                </div>
+      
+                <div class="item">
+                    <div class="col-xs-12 col-sm-1 col-md-4">
+                      <a href="#"><img src="p8.jpg" class="img-responsive center-block"></a>
+                      <span class="badge">20%</span>
+                      <h4 class="text-center">Stylish Green shirt</h4>
+                      <h5 class="text-center">Rs. 3000</h5>
+                    </div>
+                  </div>
+      
+              </div>
+      
+              <div id="slider-control">
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev"><img src="r1.png" alt="Left" class="img-responsive1"></a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next"><img src="r2.png" alt="Right" class="img-responsive1"></a>
+            </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        <div class="container">
+            <div class="row" id="slider-text">
+              <div class="col-md-12" >
+                 <DIV CLASS="h2"><span>RECENTLY VIEWED</span></DIV> 
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+                     
+            </div>
+         <div class="col-sm-8 text-left"> 
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="carousel multi-item-carousel" id="myCarousel" data-ride="carousel">
+                  <div class="carousel-inner">
+          
+                    <div class="item active">
+                      <div class="col-xs-12 col-sm-1 col-md-4">
+                        <a href="#"><img src="p9.jpg" class="img-responsive center-block"></a>
+                        <span class="badge">20%</span>
+                        <h4 class="text-center">Red Dotted Dress</h4>
+                        <h5 class="text-center">Rs. 500</h5>
+                      </div>
+                    </div>
+          
+                    <div class="item">
+                      <div class="col-xs-12 col-sm-1 col-md-4">
+                        <a href="#"><img src="p10.jpg" class="img-responsive center-block"></a>
+                        <h4 class="text-center">Magenta Floral Dress</h4>
+                        <h5 class="text-center">Rs. 2500</h5>
+                      </div>
+                    </div>
+          
+                    <div class="item">
+                      <div class="col-xs-12 col-sm-1 col-md-4">
+                        <a href="#"><img src="p11.jpg" class="img-responsive center-block"></a>
+                        <span class="badge">20%</span>
+                        <h4 class="text-center">Stylish Green shirt</h4>
+                        <h5 class="text-center">Rs. 3000</h5>
+                      </div>
+                    </div>
+          
+                    <div class="item">
+                        <div class="col-xs-12 col-sm-1 col-md-4">
+                          <a href="#"><img src="p1.jpg" class="img-responsive center-block"></a>
+                          <span class="badge">20%</span>
+                          <h4 class="text-center">Stylish Green shirt</h4>
+                          <h5 class="text-center">Rs. 3000</h5>
+                        </div>
+                      </div>
+          
+                  </div>
+          
+                  <div id="slider-control">
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><img src="r1.png" alt="Left" class="img-responsive1"></a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next"><img src="r2.png" alt="Right" class="img-responsive1"></a>
+                </div>
+                </div>
+                
+              </div>
+              
+            </div>
+  </div>
+ 
+      <div class="col-sm-2 sidenav">
+                 
+        </div> </div></div></div>
+        <footer class="footer">
+          <nav>
+            
+            <div class="container-fluid">
+            
+              <div class="collapse navbar-collapse">
+                  
+                <ul class="nav navbar-nav">
+                  <li><a href="#" class="a"><b>WOMEN</b></a></li>
+                  <li><a href="#" class="a"><b>MEN</b></a></li>
+                  <li><a href="#" class="a"><b>BABY & KIDS</b></a></li>
+                  <li><a href="#" class="a"><b>HOME FASHION</b></a></li>
+                  <li><a href="#" class="a"><b>OFFERS</b></a></li>
+               
+                  
+                </ul></div>
+                 <div class="right"><ul class="nav navbar-nav"><li><a href="#" class="a"><b> ABOUT</b></a></li>
+                  <li><a href="#" class="a"><b> Contact US</b></a></li> 
+                <li>
+                    <a href="#" class="a">
+                  <img src="f.png" width="30px" height="20px" class="img-r"></a>
+                </li>
+                <li> <a href="#" class="a"><img src="f1.png" width="30px" height="20px" class="img-r"></a> </li>
+                <li><a href="#" class="a"><img src="t.png" width="30px" height="20px" class="img-r"></a> </li>
+                <li>  <a href="#" class="a"><img src="g+.png" width="30px" height="20px" class="img-r"></a></li>
+                </ul>
+               
+                </div>
+               
+                
+             
+              
+             
+             
+            </div>
+          </nav>
+          <nav class=".nav">
+            <div class="container-fluid">
+           
+              
+              <div class="collapse navbar-collapse">
+                  
+                <span>
+                  <ul class="nav navbar-nav">
+                    <li><a href="#"><b> Sarees | </b></a></li>
+                    <li><a href="#"><b> Dhoties | </b></a></li>
+                    <li><a href="#"><b> Kurtis | </b></a></li>
+                    <li><a href="#"><b> Salwars and Chudithars | </b></a></li>
+                    <li><a href="#"><b> Formal shirts | </b></a></li>
+                    <li><a href="#"><b> Bags | </b></a></li>
+                    <li><a href="#"><b> belts | </b></a></li>
+                 
+                    
+                  </ul>
+               
+                <center>@2015 Nalli silks. All Rights Reserved</center>
+               <div class="left"><ul class="nav navbar-nav"><li><b> Terms & Condition | </b></li>
+                <li><b> Privacy Policy | </b></li>
+                <li><b> Company Policy | </b></li></ul></div>
+              </span>
+               
+              </div>
+             
+             </div></nav>           
+         
+          </footer>
+</body>
+</html>

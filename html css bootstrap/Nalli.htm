@@ -1,0 +1,1206 @@
+
+<!-- saved from url=(0049)file:///Users/kumaresan/Desktop/ramya/nalli1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Nalli</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="./Nalli_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Nalli_files/font-awesome.min.css">
+    <script src="./Nalli_files/jquery-1.10.2.js"></script>   
+    <script src="./Nalli_files/jquery.min.js"></script>
+    <script src="./Nalli_files/bootstrap.min.js"></script>
+    
+    <style>
+         @font-face {
+            font-family: 'SourceSansProRegular';
+            src: url('css1/fonts/SourceSansProRegular.eot');
+            src: url('css1/fonts/SourceSansProRegular.eot') format('embedded-opentype'),
+                 url('css1/fonts/SourceSansProRegular.woff2') format('woff2'),
+                 url('css1/fonts/SourceSansProRegular.woff') format('woff'),
+                 url('css1/fonts/SourceSansProRegular.ttf') format('truetype'),
+                 url('css1/fonts/SourceSansProRegular.svg#SourceSansProRegular') format('svg');
+        }
+        .carousel {
+            /* position: relative; */
+            margin-left: 10px;
+            margin-right: 10px;
+         }
+         .row {
+             margin-right: -15px;
+             margin-left: -15px;
+         }
+        /* TOP NAV */
+         .navbar {
+             margin-bottom: 0;
+             border-radius: 0;
+             
+         }
+         .navbar-inverse .navbar-nav>li>a{
+             font-family: "SourceSansProRegular";
+         
+         }
+         #myNavbar{
+             float:right;
+         }
+         /* END of TOP NAV */
+
+         /* HEADER */
+         header {
+             background-color: #fff;     
+             position:relative;        
+         }
+         .header .navbar{
+             position: relative;
+             margin-bottom: 0;
+             border-radius: 0;            
+             padding-top:15px;
+             padding-bottom:15px;
+             background-color:#fff; 
+             height:80px;
+         }
+         .header .container-fluid{
+             position: absolute;
+             left:16%;
+             width:70%;
+         }
+         .header .navbar-inverse .navbar-nav>li>a{
+             color: black;
+             font-style: bold;
+             font-family: "SourceSansProRegular";
+           
+         }
+         .container-fluid .l1{
+             float:right;
+             margin-right: 97px;
+         }
+         .header .navbar-inverse:hover .navbar-nav>li>a {
+             color:black;
+             font-family: "SourceSansProRegular";
+         }
+         .align{
+             float:left;
+             margin-left: 42px;
+         }
+         #button-holder{
+             background-color:#f1f1f1;
+             border-top:thin solid #e5e5e5;
+             box-shadow:1px 1px 1px 1px #e5e5e5;
+             cursor:pointer;
+             float:left;
+             height:30px;
+             margin-left:0px;
+             margin-top: 10px;
+             margin-bottom:10px; 
+             text-align:center;
+             width:50px;
+         }
+         #button-holder img{
+             margin:4px;
+             width:20px; 
+         }
+         #likes{
+             float:left;
+             height:20px;
+             margin-top: 10px;
+             margin-bottom:10px;
+             margin-left:10px;
+             text-align:center;
+             width:20px;
+         }  
+         #cart img{
+             margin:4px;
+             width:25px; 
+             height:22px;
+         }
+         #cart{
+             float:left;
+             height:10px;
+             margin-top: 10px;
+             margin-bottom:10px;
+             margin-left:20px;
+             text-align:center;
+             width:20px;
+         }  
+         #profile img{
+             margin:4px;
+             width:30px; 
+             border-radius: 50%;
+             height:25px;
+         }
+         #profile{
+             float:left;
+             height:20px;
+             margin-top: 10px;
+             margin-bottom:10px;
+             margin-left:20px;
+             text-align:center;
+             width:20px;
+         }  
+         #likes img{
+             margin:4px;
+             width:40px; 
+         }
+         #search-text-input{
+             margin-top: 10px;
+             margin-bottom:10px;
+             margin-left: 80px;
+             border-top:thin solid  #e5e5e5;
+             border-right:thin solid #e5e5e5;
+             border-bottom:0;
+             border-left:thin solid  #e5e5e5;
+             box-shadow:0px 1px 1px 1px #e5e5e5;
+             float:left;
+             color:black;
+             font-family: "SourceSansProRegular";
+             width:250px;
+             height: 30px;
+             padding: 0px;
+             font-size: 15px;  
+         }
+         @media screen and (max-width: 1123px){
+            .header .navbar{
+                 padding-left: 10px;
+             }
+             .align
+             {
+                 visibility: hidden;
+             }
+             .header .navbar-inverse .navbar-nav>li>a{
+                 font-size:10px;
+             }
+             #search-text-input{
+                 font-size: 10px;
+                 width:100px;
+             }
+         }
+         /* END OF HEADER */
+
+         /* Banner */
+
+         .container .carousel-inner{
+             background-color:rgb(219, 219, 219);
+             float:right;
+             width:620px;
+             height:450px;
+             object-fit: fill;
+             overflow: hidden;
+             transition: 1s all;
+         }
+         .container .carousel-inner img{
+            padding-top:20px;
+             padding-bottom:20px;
+             padding-right:20px;
+             height:405px;
+             width:620px;
+             object-fit: fill;
+             overflow: hidden;
+             transition: 1s all;
+         }
+         .container .img-responsive{
+             width:100%;
+             height:450px;
+             object-fit: fill;
+             overflow: hidden;
+             transition: 1s all;
+             float:right;
+         }
+         
+        
+         /* Hide the carousel text when the screen is less than 600 pixels wide */
+         
+         /* END of Banner */
+
+         /* SIDE text of BANNER */
+         
+         .col-sm-4{
+             position: relative;
+             
+         }
+         .r{
+            right:0;
+            left:auto;
+         }
+         .text{
+             background-color:rgb(219, 219, 219);
+             color:#444;
+             width:620px;
+             height:450px;
+             position: absolute;;
+             padding-top:80px;
+             padding-left:280px;
+             padding-right: 120px;
+             padding-bottom:50px;
+             font-size:40px;
+             z-index:1;
+             font-family: "SourceSansProRegular";
+             margin-left:-20px;
+        }
+        
+        /* END of SIDE text of BANNER */
+
+        /* 3 column First row */
+        #col-3 {
+            height:250px;   
+        }
+        .col-sm-8 .item{
+            background-color: white;
+        }
+         .col-sm-8 .carousel-inner{
+            background-color: white;
+             width:100%;
+             height:auto;
+             object-fit: fill;
+             overflow: hidden;
+             transition: 1s all;
+         }
+         .col-sm-8 .carousel-control{            
+            height:3px;
+            top:50%;
+            width:auto;
+            background-color: white;
+            color:black;  
+            text-shadow: none; 
+         }
+         
+         .col-sm-8 .img-responsive{
+            width:auto;
+            height: 250px;   
+            object-fit: fill;
+            overflow: hidden;
+            transition: 1s all;
+         }
+        #row{
+            margin-top:15px;
+            background-color: white;
+         }
+         .col-md-4{
+            position:relative;
+         }
+         .caption{
+            position: absolute;
+            top:50%;
+            left:30px;
+            color:white;
+            font-family:"SourceSansProRegular";
+            padding:10px;
+         }
+         .img-responsive{
+             border:1px solid rgb(238, 234, 234);
+         }
+        /* END of 3 column's row 1 */
+
+        /* Dotted lines for headings */
+         .h2 {
+             font-family:"SourceSansProRegular";
+             width: 100%; 
+             text-align: center; 
+             border-bottom: 1px dotted #000; 
+             font-size:20px;;    
+             margin: 10px 0 20px; 
+        }
+         .h2 span { 
+             background:#fff; 
+             padding:0 10px; 
+         }
+        /* End of Dotted lines for headings */
+
+        /* 4 column rows */
+        .row{
+            margin-top: 30px;
+            margin-bottom:30px;
+        }
+         .col-md-5{
+             width:25%;
+            
+         }
+         .caption1 {
+            position: absolute;            
+            color:#777;
+            font-family:"SourceSansProRegular";
+            padding:1px;
+         }
+         #col-4{
+             height:520px;
+         }
+         #col-sm-8 .carousel-inner{
+            background-color: white;
+             width:100%;
+             height:560px;
+             object-fit: fill;
+             overflow: hidden;
+             transition: 1s all;
+         }
+         #col-sm-8 .carousel-control{            
+             height:3px;
+             top:50%;
+             width:auto;
+             background-color: white;
+             color:black;  
+             text-shadow: none; 
+         }
+         #col-sm-8 .img-responsive{
+            width:auto;
+            height: 400px;   
+            object-fit: fill;
+            overflow: hidden;
+            transition: 1s all;
+         }
+         .checked {
+            color: orange;
+        }
+        .like{
+            top: -390px;
+            left: 218px;            
+            font-size: 20px;
+            position: absolute;            
+            color:#999;
+            font-family:"SourceSansProRegular";
+            padding:1px;
+            cursor: pointer;
+        }
+        .active{
+            color:red;
+        }
+        .cart{
+            top: -390px;
+            position: absolute;         
+            font-size: 25px;                   
+            color:#999;
+            cursor: pointer;
+            
+        }
+        .active1{
+            color:red;
+        }
+        .checked, .checked1,.checked2, .checked3, .checked4{
+            color:#999;
+        }
+        
+        .check{
+            color:red;
+        }
+        .check1{
+            color:orange;
+        }
+        .check2{
+            color:yellow;
+        }
+        .check3{
+            color:lightgreen;
+        }
+        .check4{
+            color:darkgreen;
+        }
+        /* Footer */
+        footer {
+             background-color: rgb(230, 230, 230);
+             color: white;
+             padding:60px;
+         }
+        footer .navbar-inverse {
+             background-color:rgb(230, 230, 230);
+             border-color: rgb(230, 230, 230);
+        }
+        footer .navbar{
+            position: relative;
+        }
+        footer .navbar-inverse .navbar-nav>li>a{
+
+             color: #555;
+             font-style: bold;
+             font-family: "SourceSansProRegular";
+             
+             margin-top:10px;
+             font-size:12px;
+         }
+         footer #right1{
+             position: absolute;
+             color: #555;
+             font-style: bold;
+             font-family: "SourceSansProRegular";
+             left:80%;
+             top:0px;
+             font-size:10px;
+         }
+         footer #middle{
+             position: absolute;
+             color: #333;
+             font-style: bold;
+             font-family: "SourceSansProRegular";
+             left:50%;
+             top:0px;
+             font-size:20px;
+         }
+         footer .navbar-inverse1 .navbar-nav>li>a{
+
+             color: #666;
+             font-style: bold;
+             font-family: "SourceSansProRegular";
+             margin-right: 0px;
+             font-size:9px;
+         }
+         footer #right2{
+             position: absolute;
+             color: #666;
+             font-style: bold;
+             font-family: "SourceSansProRegular";
+             left:79.7%;
+             top:0px;
+             font-size:10px;
+         }
+         footer #middle1{
+             position: absolute;
+             color: #333;
+             font-style: bold;
+             font-family: "SourceSansProRegular";
+             left:47.5%;
+             top:0px;
+            
+         }
+         footer .nav>li>a {
+             position: relative;
+             display: block;
+             padding: 0px 5px;
+         }
+         /* Footer end */
+
+         /* Media Queries */
+
+         @media screen and (min-width: 768px) {
+             header .container-fluid, header .navbar{
+                 float:none;
+                 width:100%;
+                 top:0;
+                 right:0;
+                 left:0;
+                 
+             }
+             .carousel-inner, .carousel-inner .img-responsive, .text{
+                 width:100%;
+                 height:100%;
+                 float:none;
+                 top:0;
+                 padding:0px;
+                 margin:0px;
+                 bottom:0px;
+             }
+            
+             .text{
+                 float:none;
+                 text-indent: -9999;
+             }
+
+         }
+
+         /* End of Media Queries */
+        
+    </style>
+    <script>
+            $(document).ready(function(){
+                $(".like").on({
+                     click: function(){
+                        $(this).style.css("red");
+                    }  
+                });
+                $(".cart").on({
+                     click: function(){
+                         
+                        $(this).toggleClass("active1");
+                    }  
+                });
+                $(".checked").on({
+                     click: function(){
+                        
+                        $(this).toggleClass("check");
+                    }  
+                });
+                $(".checked1").on({
+                     click: function(){ 
+                        $(".checked").toggleClass("check1");
+                        $(this).toggleClass("check1");
+                    }  
+                });
+                $(".checked2").on({
+                     click: function(){
+                        $(".checked").toggleClass("check2");
+                        $(".checked1").toggleClass("check2");
+                        $(this).toggleClass("check2");
+                    }  
+                });
+                $(".checked3").on({
+                     click: function(){
+                        $(".checked").toggleClass("check3");
+                        $(".checked1").toggleClass("check3");
+                        $(".checked2").toggleClass("check3");
+                        $(this).toggleClass("check3");
+                    }  
+                });
+                $(".checked4").on({
+                     click: function(){
+                        $(".checked").toggleClass("check4");
+                        $(".checked1").toggleClass("check4");
+                        $(".checked2").toggleClass("check4");
+                        $(".checked3").toggleClass("check4");
+                        $(this).toggleClass("check4");
+                    }  
+                });
+            });
+     </script>
+</head>
+<body style="">
+    <!-- TOP NAV-->
+     <nav class="navbar navbar-inverse">
+         <div class="container-fluid">
+             <div class="collapse navbar-collapse" id="myNavbar">
+                 <ul class="nav navbar-nav">
+                     <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#">Nalli Thumbnail</a></li>
+                     <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#">Voucher</a></li>
+                     <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#">Contact us</a></li>   
+                 </ul>
+             </div>
+         </div>
+     </nav>
+    <!-- End of TOP NAV-->
+
+    <!-- HEADER-->
+    <header class="header">
+            <nav class="navbar navbar-inverse">                
+                <div class="container-fluid">
+                    <div class="align">
+                        <img src="./Nalli_files/nalli.jpg" width="65px" height="50px">
+                    </div>                        
+                    <div class="collapse navbar-collapse">                          
+                        <ul class="nav navbar-nav">
+                            <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>WOMEN</b></a></li>
+                            <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>MEN</b></a></li>
+                            <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>BABY &amp; KIDS</b></a></li>
+                            <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>HOME FASHION</b></a></li>
+                            <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>OFFERS</b></a></li>                         
+                        </ul>
+                        <div class="l1">
+                        <input type="text" placeholder="  Search" class="mainLoginInput" id="search-text-input">
+                        <div id="button-holder">
+                            <img src="./Nalli_files/l3.png">
+                        </div>
+                        <div id="likes">
+                            <a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#">
+                                <img src="./Nalli_files/l2.png">
+                            </a>
+                        </div>
+                        <div id="cart">
+                            <a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#">
+                                <img src="./Nalli_files/l1.png">
+                            </a>
+                        </div>
+                        <div id="profile">
+                            <a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#">
+                                <img src="./Nalli_files/profile.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    </div>              
+                </div>
+            </nav>
+        </header>
+    <!-- END OF HEADER-->           
+
+    <!-- ROW and CONTAINER dividing -->
+    <div class="container">
+           
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="text">
+                            <span>
+                                NOW A WIDE RANGE OF <font color="red">KURTIS</font> TO CHOOSE FROM!
+                            </span>
+                        </div>               
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                  <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                    <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+                  </ol>
+                <div class="item">
+                  <img src="./Nalli_files/j4.jpg">
+                </div>
+          
+                <div class="item">
+                  <img src="./Nalli_files/j2.jpg">
+                </div>
+              
+                <div class="item active">
+                  <img src="./Nalli_files/j3.jpg">
+                </div>
+            </div>             
+            </div>
+          </div>
+    
+    <!-- end of ROW and CONTAINER dividing -->
+     
+         <div class="row content" id="row">
+                <div class="col-sm-2">
+                 
+                </div>
+
+                <!-- 3 column First row -->
+                <div class="col-sm-8"> 
+
+                     <!-- DOTTED TEXT -->
+                         <div class="h2"><span>TRENDING NOW</span></div>
+                     <!-- END OF DOTTED TEXT -->
+                
+                     <div id="imageCarousel" class="carousel slide" data-ride="">
+                         <div class="carousel-inner">
+                             <div class="item active">
+                                 <div class="row" id="col-3">
+                                     <div class="col-md-4">
+                                         <img src="./Nalli_files/j3.jpg" class="img-responsive">
+                                         <div class="caption">
+                                             <h3>Fresh<br>
+                                             <b>Arrivals</b></h3>
+                                             <h6>Contemporary Ethnic</h6>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-4">
+                                         <img src="./Nalli_files/j1.jpg" class="img-responsive">
+                                         <div class="caption">
+                                                <h3>Fresh<br>
+                                                <b>Arrivals</b></h3>
+                                                <h6>Contemporary Ethnic</h6>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-4">
+                                         <img src="./Nalli_files/c1.jpeg" class="img-responsive">
+                                         <div class="caption">
+                                                <h3>Fresh<br>
+                                                <b>Arrivals</b></h3>
+                                                <h6>Contemporary Ethnic</h6>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="item">
+                                 <div class="row">
+                                     <div class="col-md-4">
+                                         <img src="./Nalli_files/c1.jpeg" class="img-responsive">
+                                         <div class="caption">
+                                                <h3>Fresh<br>
+                                                <b>Arrivals</b></h3>
+                                                <h6>Contemporary Ethnic</h6>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-4">
+                                         <img src="./Nalli_files/j1.jpg" class="img-responsive">
+                                         <div class="caption">
+                                                <span><h3>Fresh<br>
+                                                <b>Arrivals</b></h3>
+                                                <h6>Contemporary Ethnic</h6></span>
+                                         </div>
+                                     </div>
+                                     <div class="col-md-4">
+                                         <img src="./Nalli_files/j3.jpg" class="img-responsive">
+                                         <div class="caption">
+                                                <h3>Fresh<br>
+                                                <b>Arrivals</b></h3>
+                                                <h6>Contemporary Ethnic</h6>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                            
+                        </div>
+                         
+                     </div>
+                     <a class="carousel-control" href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#imageCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="r carousel-control" href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#imageCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                </div> 
+                  
+                <!-- end of 3 column First row -->
+
+                <div class="col-sm-2">
+                   
+                </div>
+            </div>
+            <div class="row content" id="row">
+                    <div class="col-sm-2">
+                     
+                    </div>
+    
+                    <!-- 4 column First row -->
+                    <div class="col-sm-8" id="col-sm-8"> 
+    
+                         <!-- DOTTED TEXT -->
+                             <div class="h2"><span>NEW ARRIVALS</span></div>
+                         <!-- END OF DOTTED TEXT -->
+                    
+                         <div id="imageCarousel1" class="carousel slide" data-ride="">
+                             <div class="carousel-inner">
+                                 <div class="item active">
+                                     <div class="row" id="col-4">
+                                         <div class="col-md-5">
+                                             <img src="./Nalli_files/t1.jpg" class="img-responsive">
+                                             <div class="caption1">
+                                                    <span class="like">♥</span>
+                                                    <span class="fa cart"></span>
+                                                    <span><h5>Ama Bella</h5>
+                                                        <h5>Multi color printed Sarees</h5>
+                                                        <h4>2000/-</h4>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </span>
+                                                        
+                                             </div>
+                                         </div>
+                                         <div class="col-md-5">
+                                             <img src="./Nalli_files/t2.jpg" class="img-responsive">
+                                             <div class="caption1">
+                                                    <span class="fa cart"></span>
+                                                    <span class="like">♥</span>
+                                                    <span><h5>Ama Bella</h5>
+                                                        <h5>Multi color printed Sarees</h5>
+                                                        <h4>2000/-</h4>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </span>
+                                                        
+                                             </div>
+                                         </div>
+                                         <div class="col-md-5">
+                                             <img src="./Nalli_files/t3.jpg" class="img-responsive">
+                                             <div class="caption1">
+                                                    <span class="fa cart"></span>
+                                                    <span class="like">♥</span>
+                                                    <span><h5>Ama Bella</h5>
+                                                        <h5>Multi color printed Sarees</h5>
+                                                        <h4>2000/-</h4>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star "></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </span>
+                                                        
+                                             </div>
+                                         </div>
+                                         <div class="col-md-5">
+                                                <img src="./Nalli_files/t4.jpg" class="img-responsive">
+                                                <div class="caption1">
+                                                        <span class="fa cart"></span>
+                                                        <span class="like">♥</span>
+                                                        <span><h5>Ama Bella</h5>
+                                                            <h5>Multi color printed Sarees</h5>
+                                                            <h4>2000/-</h4>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked1"></span>
+                                                            <span class="fa fa-star checked2"></span>
+                                                            <span class="fa fa-star checked3"></span>
+                                                            <span class="fa fa-star checked4"></span>
+                                                        </span>
+                                                            
+                                                 </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="row">
+                                         <div class="col-md-5">
+                                             <img src="./Nalli_files/t5.jpg" class="img-responsive">
+                                             <div class="caption1">
+                                                    <span class="fa cart"></span>
+                                                    <span class="like">♥</span>
+                                                    <span><h5>Ama Bella</h5>
+                                                        <h5>Multi color printed Sarees</h5>
+                                                        <h4>2000/-</h4>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star "></span>
+                                                        <span class="fa fa-star "></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </span>
+                                                        
+                                             </div>
+                                         </div>
+                                         <div class="col-md-5">
+                                             <img src="./Nalli_files/t6.jpg" class="img-responsive">                                             
+                                             <div class="caption1">
+                                                    <span class="fa cart"></span>
+                                                    <span class="like">♥</span>
+                                                    <span><h5>Ama Bella</h5>
+                                                        <h5>Multi color printed Sarees</h5>
+                                                        <h4>2000/-</h4>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                       
+                                                    </span>
+                                                        
+                                             </div>
+                                         </div>
+                                         <div class="col-md-5">
+                                             <img src="./Nalli_files/t7.jpg" class="img-responsive">
+                                             <div class="caption1">
+                                                    <span class="fa cart"></span>
+                                                    <span class="like">♥</span>
+                                                    <span><h5>Ama Bella</h5>
+                                                        <h5>Multi color printed Sarees</h5>
+                                                        <h4>2000/-</h4>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </span>
+                                                        
+                                             </div>
+                                         </div>
+                                         <div class="col-md-5">
+                                                <img src="./Nalli_files/t8.jpg" class="img-responsive">
+                                                <div class="caption1">
+                                                        <span class="fa cart"></span>
+                                                        <span class="like">♥</span>
+                                                        <span><h5>Ama Bella</h5>
+                                                            <h5>Multi color printed Sarees</h5>
+                                                            <h4>2000/-</h4>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                        </span>
+                                                            
+                                                 </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="row">
+                                         <div class="col-md-5">
+                                             <img src="./Nalli_files/t9.jpg" class="img-responsive">
+                                             <div class="caption1">
+                                                    <span class="fa cart"></span>
+                                                    <span class="like">♥</span>
+                                                    <span><h5>Ama Bella</h5>
+                                                        <h5>Multi color printed Sarees</h5>
+                                                        <h4>2000/-</h4>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </span>
+                                                        
+                                             </div>
+                                         </div>
+                                         <div class="col-md-5">
+                                              <img src="./Nalli_files/t10.jpg" class="img-responsive">
+                                              <div class="caption1">
+                                                    <span class="fa cart"></span>
+                                                    <span class="like">♥</span>
+                                                    <span><h5>Ama Bella</h5>
+                                                        <h5>Multi color printed Sarees</h5>
+                                                        <h4>2000/-</h4>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </span>
+                                                        
+                                             </div>
+                                        </div>
+                                         </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control" href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#imageCarousel1" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="r carousel-control" href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#imageCarousel1" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                         </div>
+                         
+                    </div>   
+                    <!-- end of 4 column First row -->
+
+                    <!--4 column 2nd row -->
+                    <div class="row content" id="row">
+                            <div class="col-sm-2">
+                             
+                            </div>
+            
+                            <!-- 4 column 2nd row -->
+                            <div class="col-sm-8" id="col-sm-8"> 
+            
+                                 <!-- DOTTED TEXT -->
+                                     <div class="h2"><span>SIMILAR PRODUCTS</span></div>
+                                 <!-- END OF DOTTED TEXT -->
+                            
+                                 <div id="imageCarousel2" class="carousel slide" data-ride="">
+                                     <div class="carousel-inner">
+                                         <div class="item active">
+                                             <div class="row" id="col-4">
+                                                 <div class="col-md-5">
+                                                     <img src="./Nalli_files/y1.jpg" class="img-responsive">
+                                                     <div class="caption1">
+                                                            <span class="like">♥</span>
+                                                            <span class="fa cart"></span>
+                                                            <span><h5>Ama Bella</h5>
+                                                                <h5>Multi color printed Sarees</h5>
+                                                                <h4>2000/-</h4>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                            </span>
+                                                                
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-5">
+                                                     <img src="./Nalli_files/y2.jpg" class="img-responsive">
+                                                     <div class="caption1">
+                                                            <span class="fa cart"></span>
+                                                            <span class="like">♥</span>
+                                                            <span><h5>Ama Bella</h5>
+                                                                <h5>Multi color printed Sarees</h5>
+                                                                <h4>2000/-</h4>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star"></span>
+                                                            </span>
+                                                                
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-5">
+                                                     <img src="./Nalli_files/y3.jpg" class="img-responsive">
+                                                     <div class="caption1">
+                                                            <span class="fa cart"></span>
+                                                            <span class="like">♥</span>
+                                                            <span><h5>Ama Bella</h5>
+                                                                <h5>Multi color printed Sarees</h5>
+                                                                <h4>2000/-</h4>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star "></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                            </span>
+                                                                
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-5">
+                                                        <img src="./Nalli_files/y4.jpg" class="img-responsive">
+                                                        <div class="caption1">
+                                                                <span class="fa cart"></span>
+                                                                <span class="like">♥</span>
+                                                                <span><h5>Ama Bella</h5>
+                                                                    <h5>Multi color printed Sarees</h5>
+                                                                    <h4>2000/-</h4>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star"></span>
+                                                                </span>
+                                                                    
+                                                         </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="item">
+                                             <div class="row">
+                                                 <div class="col-md-5">
+                                                     <img src="./Nalli_files/y5.jpeg" class="img-responsive">
+                                                     <div class="caption1">
+                                                            <span class="fa cart"></span>
+                                                            <span class="like">♥</span>
+                                                            <span><h5>Ama Bella</h5>
+                                                                <h5>Multi color printed Sarees</h5>
+                                                                <h4>2000/-</h4>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star "></span>
+                                                                <span class="fa fa-star "></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                            </span>
+                                                                
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-5">
+                                                     <img src="./Nalli_files/y6.jpg" class="img-responsive">                                             
+                                                     <div class="caption1">
+                                                            <span class="fa cart"></span>
+                                                            <span class="like">♥</span>
+                                                            <span><h5>Ama Bella</h5>
+                                                                <h5>Multi color printed Sarees</h5>
+                                                                <h4>2000/-</h4>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                               
+                                                            </span>
+                                                                
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-5">
+                                                     <img src="./Nalli_files/y7.jpeg" class="img-responsive">
+                                                     <div class="caption1">
+                                                            <span class="fa cart"></span>
+                                                            <span class="like">♥</span>
+                                                            <span><h5>Ama Bella</h5>
+                                                                <h5>Multi color printed Sarees</h5>
+                                                                <h4>2000/-</h4>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                            </span>
+                                                                
+                                                     </div>
+                                                 </div>
+                                                 <div class="col-md-5">
+                                                        <img src="./Nalli_files/y8.jpg" class="img-responsive">
+                                                        <div class="caption1">
+                                                                <span class="fa cart"></span>
+                                                                <span class="like">♥</span>
+                                                                <span><h5>Ama Bella</h5>
+                                                                    <h5>Multi color printed Sarees</h5>
+                                                                    <h4>2000/-</h4>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star "></span>
+                                                                    <span class="fa fa-star "></span>
+                                                                    <span class="fa fa-star"></span>
+                                                                    <span class="fa fa-star"></span>
+                                                                </span>
+                                                                    
+                                                         </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                        
+                                        </div>
+                                    </div>
+                                     <a class="carousel-control" href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#imageCarousel2" role="button" data-slide="prev">
+                                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                         <span class="sr-only">Previous</span>
+                                     </a>
+                                     <a class="r carousel-control" href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#imageCarousel2" role="button" data-slide="next">
+                                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                         <span class="sr-only">Next</span>
+                                     </a>
+                                 </div>
+                            </div>   
+
+                    <!-- end of 4 column 2nd row -->
+    
+                    <div class="col-sm-2">
+                       
+                    </div>
+                          
+          
+    <!-- END of ROW and CONTAINER dividing -->
+    <!-- FOOTER -->
+     <footer>
+            <nav class="navbar navbar-inverse">                
+                    <div class="container-fluid">                                         
+                        <div class="collapse navbar-collapse">                          
+                            <ul class="nav navbar-nav">
+                                <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Women</b></a></li>
+                                <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Men</b></a></li>
+                                <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Baby &amp; Kids</b></a></li>
+                                <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Home Fashion</b></a></li>
+                                <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Offers</b></a></li>                         
+                            </ul>                     
+                                    
+                        </div>              
+                    </div>
+                    <div class="container-fluid">                                         
+                            <div class="collapse navbar-collapse" id="middle">                          
+                                <ul class="nav navbar-nav">
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b><font size="5px">Nalli</font></b></a></li>
+                                   
+                                               
+                                </ul>                     
+                                                   
+                            </div>              
+                        </div>
+                    <div class="container-fluid">                                         
+                            <div class="collapse navbar-collapse" id="right1">                          
+                                <ul class="nav navbar-nav">
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>About</b></a></li>
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Contact</b></a></li>
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b><img src="./Nalli_files/f.png" width="20px" height="20px"></b></a></li>
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b><img src="./Nalli_files/f1.png" width="20px" height="20px"></b></a></li>
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b><img src="./Nalli_files/t.png" width="20px" height="20px"></b></a></li>   
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b><img src="./Nalli_files/g+.png" width="20px" height="20px"></b></a></li>
+                                      
+                                </ul>                     
+                                                  
+                            </div>              
+                        </div>
+                </nav>
+                <nav class="navbar navbar-inverse1">                
+                        <div class="container-fluid">                                         
+                            <div class="collapse navbar-collapse">                          
+                                <ul class="nav navbar-nav">
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Sarees |</b></a></li>
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Dhoties |</b></a></li>
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>CHUTIDHAR |</b></a></li>
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>TRENDY TOPS |</b></a></li>
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>SHOTS |</b></a></li>      
+                                    <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Belts</b></a></li>                     
+                                </ul>                     
+                                        
+                            </div>              
+                        </div>
+                        <div class="container-fluid">                                         
+                                <div class="collapse navbar-collapse" id="middle1">                          
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>@2015. Nalli Silks. All Rights Reserved</b></a></li>
+                                       
+                                                   
+                                    </ul>                     
+                                                       
+                                </div>              
+                            </div>
+                        <div class="container-fluid">                                         
+                                <div class="collapse navbar-collapse" id="right2">                          
+                                        <ul class="nav navbar-nav">
+                                                <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Terms and Conditions |</b></a></li>
+                                                <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Privacy Policies |</b></a></li>
+                                                <li><a href="file:///Users/kumaresan/Desktop/ramya/nalli1.html#"><b>Company Policies</b></a></li>
+                                                                      
+                                            </ul>                             
+                                                      
+                                </div>              
+                            </div>
+                    </nav>
+     </footer>
+    <!-- End of FOOTER -->
+
+</body></html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            var film={Name:["Jillunu oru kadhal","Remo"],Hero:["Surya","Siva"]};
+            var result=function(x,y,z){
+                return "This movie "+ this.Name[0] + " by " + this.Hero[0] + " is " + x +" " + y + " "+ z;
+            }
+                var a=result.call(film,"best","film","of the year");
+                console.log("Call Result:",a);
+                filmDetails=["best","film","of the year"];
+                var b=result.apply(film,filmDetails);
+                console.log("Apply Result:",b)
+                var bound=result.bind(film);
+                console.dir(bound)               
+                console.log("Bind Result:", bound("best","film","of the year"));
+        </script>
+    </head>
+</html>

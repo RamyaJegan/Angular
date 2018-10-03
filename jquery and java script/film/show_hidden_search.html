@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Films 2018</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="link.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="javascri.js"></script>   
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Codystar">
+
+<link rel="icon" href="Favicon.ico">
+</head>
+<body >
+    <div class="wrapper"  >
+        <div class="profile">                      
+            <center><h1>FILMS <font color="red">2</font><font color="green">0</font><font color="orange">1</font><font color="purple">8</font></h1></center>
+            <div class="animate"></div>          
+                <div class="container" >
+                    <input type="text" id="myInput" placeholder="Search" title="Type in a name">             
+                   
+                        <table id="myTable">
+                           <thead >
+                                <tr class="header">
+                                   <th style="width:12%">ID</th>
+                                   <th style="width:40%">TITLE</th>
+                                   <th style="width:20%">SUBJECT</th>
+                                   <th style="width:40%">ACTOR</th>
+                                   <th style="width:40%">ACTRESS</th>
+                                   <th style="width:20%">POPULARITY</th>
+                                </tr>
+                            </thead>
+                            <tbody >  
+                                    <center><div class="form-popup" id="myForm" style="display: none;">
+                                
+                                            <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+                                          </form>
+                                          <script>
+                                          function closeForm() {
+                                               document.getElementById("myForm").style.display = "none";
+                                          }
+                                          </script>
+                                        </div></center>
+                            </tbody>
+                        </table>
+                    
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+    <head>
+            <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+    .custom-file-upload {
+   display: inline-block;
+   cursor: pointer;
+}
+
+.btn_g_post {
+   border: 2px solid #034e88;
+   /* background-color: #034e88; */
+   border-radius: 11px;
+   background: #ffffff;
+   color: #034e88;
+   width: 51px;
+   height: 23px;
+   font-weight: 500;
+}
+</style>
+<script>
+$(document).ready(function(){
+    $('input[type="file"]').change(function(e){
+            var fileName = e.target.files[0].type;
+            alert('The file "' + fileName +  '" has been selected.');
+        });
+//     console.log("hai")
+// $("#btnLoad").on('click',function(){
+//     var c=$("#file-upload").attr("type");
+//     console.log(c);
+//     // handleFileSelect();
+// });
+    
+//     function handleFileSelect()
+//   {   
+
+   
+//     input = document.querySelector('input[type=file]').files[0];
+//     console.log(input.type)
+//     if (input.type=='application/pdf') {
+//       alert("select an pdf")
+//     }
+   
+//   }
+
+    });
+</script>
+</head>
+<body>
+
+<form>
+                <label for="file-upload" class="custom-file-upload btn-bs-file">
+                       <img src="images/jpg.png" class="va-2 pr-2" id="upload"/> Upload
+                   </label>
+                   <input id="file-upload" class="files-upload global-post-file-upload" name='upload_cont_img' type="file" style="display:none;" multiple="true">
+               </form>
+               <form>
+                    <label for="file-upload" class="custom-file-upload btn-bs-file">
+                           <img src="images/jpg.png" class="va-2 pr-2" id="upload"/> Upload
+                       </label>
+                       <input id="file-upload" class="files-upload global-post-file-upload" name='upload_cont_img' type="file" style="display:none;" multiple="true">
+                   </form>
+               <input type='button' id='btnLoad' value='Load'>
+</body>
+</html>

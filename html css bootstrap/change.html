@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <script>
+          $(function(){
+  $(".img-swap").live('click', function() {
+    if ($(this).attr("class") == "img-swap") {
+      this.src = this.src.replace("c1","c");
+    } else {
+      this.src = this.src.replace("c","c1");
+    }
+    $(this).toggleClass("on");
+  });
+});
+     </script>
+  </head>
+
+  <body>
+    
+   <img src="c.jpg" class="img-swap" alt="hello"/>
+    
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <script>
+        var varVariable="Ramya";
+        let letVariable="Ramyaa";
+        console.log("Var variable:",varVariable);
+        console.log("Let Variable:",letVariable);
+        f();
+        function f(){
+            console.log("Inside Func Var variable:",varVariable);
+            console.log("Inside Func Let Variable:",letVariable);
+            for (let i=0; i<10;i++){
+                var j=10;
+                console.log("Inside Loop let Var:",i)
+                console.log("Inside Loop Var Var:",j)
+            }             
+            console.log("After Loop Var Var:",j)//Scope remains
+            console.log("After Loop let Var:",i)//shows error. Scope of var is ended within the loop
+        }
+    </script>
+</html>

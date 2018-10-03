@@ -1,0 +1,34 @@
+
+<div class="header">
+    <img src="./assets/gmail.png">
+</div>
+<div class="row">
+  <div class="col-1">
+     <div class="inbox">  <img src="./assets/inbox.png" width="30px" height="30px"> <span> Inbox</span></div>
+  </div>
+  <div class="col-2">
+    <table>
+      <tr>
+        <th>Primary</th>      
+      </tr><tbody *ngFor="let item of data">
+      <tr >
+        <td class="pop">
+          <div  data-toggle="modal"  data-target="#myModal" (click)="send(item.id)"  >
+            {{item.title}}
+            <div #tdcomponent [id]="tdcomponent.innerHTML" style="display:none;">
+                {{item.id}}
+            </div>
+            <input  #f type="checkbox" [id]="item.id" [value]="item.id"/>
+    
+             
+          </div>
+          
+        </td> 
+      </tr></tbody>
+    </table>
+   
+    </div>
+  
+</div>
+<app-child [sendData]="id" (childEvent)="receiveData=$event" (i)="iData=$event" (click)="checkInputBox()" (click)="uncheckInputBox()">
+  </app-child>

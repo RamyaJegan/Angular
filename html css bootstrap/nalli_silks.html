@@ -1,0 +1,88 @@
+<html>
+    <head>
+            <title>Bootstrap Example</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+            <style>
+            /* font-family */
+             @font-face {
+                font-family: 'SourceSansProRegular';
+                src: url('css1/fonts/SourceSansProRegular.eot');
+                src: url('css1/fonts/SourceSansProRegular.eot') format('embedded-opentype'),
+                url('css1/fonts/SourceSansProRegular.woff2') format('woff2'),
+                url('css1/fonts/SourceSansProRegular.woff') format('woff'),
+                url('css1/fonts/SourceSansProRegular.ttf') format('truetype'),
+                url('css1/fonts/SourceSansProRegular.svg#SourceSansProRegular') format('svg');
+            }
+            /* Make the image fully responsive */
+            .carousel-inner img {
+                
+                width: 100%;
+                height: 100%;
+               
+            }
+            .left{
+                top:50px;
+            }
+            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+            .row.content {height: 450px}        
+            /* On small screens, set height to 'auto' for sidenav and grid */
+             @media screen and (max-width: 767px) {
+                 .row.content {height:auto;} 
+                 
+                 
+            }
+            
+            </style>
+    </head>
+    <body>
+
+            <div class="container-fluid text-center">    
+                <!--ROW-->
+                <div class="row content">
+                         <!-- LEFT COLUMN-->
+                      <div class="col-sm-2 sidenav">
+                       
+                      </div>
+                       <!-- CENTER COLUMN-->
+                       <div class="col-sm-4 text-left"> 
+                            <div class="left">
+                                    <span>
+                                        NOW A WIDE RANGE OF <font color="red">KURTIS </font>TO CHOOSE FROM!
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 text-left"> 
+                            
+                                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                                     <!-- Indicators -->
+                                            <ul class="carousel-indicators">
+                                                 <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                                 <li data-target="#demo" data-slide-to="1"></li>                     
+                                            </ul>
+                  
+                                     <!-- The slideshow -->
+                                             <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="j1.jpg" alt="Los Angeles">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="p2.jpeg" alt="New York">
+                                                </div>
+                                             </div>
+                  
+                                </div>
+                        </div>
+                    <!-- RIGHT COLUMN -->
+                        <div class="col-sm-2 sidenav">
+                 
+                        </div>
+                </div>
+            </div>
+    </bßody>
+</html>

@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <style>
+            button{
+                display: block;
+                padding:20px;
+            }
+            div{
+                display:block;
+                margin-top:30px;
+               
+            }
+            .label{
+                
+                margin:30px;
+            }
+            p{
+                padding:9px;
+                font-size:20px;
+                color:#555;
+            }
+        </style>
+        <script>
+           var nameArr= [];
+            var count=0;
+           
+            function createEle(){            
+                count=count+1;   
+
+            /* LABEL */
+
+                var namelabel = document.createElement('label');
+                    namelabel.setAttribute("class","label"); 
+                    namelabel.setAttribute("id","namelabel");
+	                namelabel.innerHTML = "Name : ";            
+	                document.getElementById("create_field").appendChild(namelabel);                   
+                
+                
+            /* TEXT BOX */     
+                var x=document.createElement("input");
+                    x.setAttribute("type","text");   
+                    x.setAttribute("class","label");              
+                    x.setAttribute("id","t"+[count]);   
+                    document.getElementById("create_field").appendChild(x);                   
+
+            
+                
+            /* LABEL */
+
+                var namelabel1 = document.createElement('label');
+                    namelabel1.setAttribute("id","namelabel1");
+                    namelabel1.setAttribute("class","label"); 
+	                namelabel1.innerHTML = "Role : ";            
+	                document.getElementById("create_field").appendChild(namelabel1);                   
+                
+                
+            /* TEXT BOX */     
+                var j=document.createElement("input");
+                    j.setAttribute("type","text");   
+                    j.setAttribute("class","label");              
+                    j.setAttribute("id","t0"+[count]);   
+                    document.getElementById("create_field").appendChild(j);
+
+             
+
+            
+            /* EDIT BUTTON */    
+              
+             var y=document.createElement("input");
+                    y.setAttribute("type","submit");
+                    y.setAttribute("value","Save");
+                    y.setAttribute("class","label"); 
+                    y.setAttribute("id","ed"+[count]);
+                    y.setAttribute("onclick", "ed("+count+")"); 
+                    document.getElementById("create_field").appendChild(y);  
+
+            /* DELETE BUTTON */   
+
+                var z=document.createElement("input");
+                    z.setAttribute("type","submit");
+                    z.setAttribute("value","Delete");
+                    z.setAttribute("class","label"); 
+                    z.setAttribute("id","del"+[count]);
+                    z.setAttribute("onclick", "del("+count+")"); 
+                    document.getElementById("create_field").appendChild(z);
+          
+                var linebreak1 = document.createElement('br');
+	                document.getElementById("create_field").appendChild(linebreak1);
+                
+               
+                
+            }
+
+            /* EDIT BUTTON ONCLICK EVENT */
+           
+            function ed(count){     
+                var a=document.getElementById("t"+[count]).value;                
+                var b=document.getElementById("t0"+[count]).value;
+                if((a=="" && b=="") ||(a=="" && b!="") || (a!="" && b=="")){
+                    alert("Please enter an value");                    
+                }
+                else{
+                    document.getElementById("ed"+[count]).value="Edit";
+                   obj = {name: a, role: b};                
+                    /*nameArr.push(obj);*/
+                    nameArr[count-1]=obj;
+
+                    var myJsonString = JSON.stringify(nameArr);
+                    document.getElementById("print").innerHTML=myJsonString;                   
+                }    
+                    
+            }
+
+            /* DELETE BUTTON ONCLICK EVENT */
+
+            function del(count)
+            {
+                var a=document.getElementById("t0"+[count]).value;
+                var a=document.getElementById("t"+[count]).value;
+                var index = nameArr.findIndex(x => x.name==a);
+                /*delete nameArr[index];*/
+               nameArr.splice(index, 1);
+                var myJsonString = JSON.stringify(nameArr);   
+                        
+                    document.getElementById("print").innerHTML=myJsonString;
+                    document.getElementById("t0"+[count]).remove();
+                    document.getElementById("t"+[count]).remove();
+                    document.getElementById("ed"+[count]).remove();
+                    document.getElementById("del"+[count]).remove();
+                    document.getElementById("namelabel").remove();
+                    document.getElementById("namelabel1").remove();
+            }
+
+            
+        </script>
+    </head>
+    <body>
+        <center><button onClick="createEle()">CLICK ME</button></center>
+        <div id="create_field">
+            
+        </div>
+        <p id="print"></p>
+    </body>
+</html>

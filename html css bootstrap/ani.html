@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <style>
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'PT Sans', sans-serif;
+  display: table;
+  width: 100%;
+  background: #fff;
+}
+.container{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  
+}
+.container div{
+  width:351px;
+  height:250px;
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px 30px;
+  background: rgba(0,0,0,0.09);
+}
+span{
+  display: block;
+  
+}
+.container div::before, .container div::after{
+  content:"";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s ;
+  background: #444;
+}
+
+span::before, span::after{
+  content:"";
+  width:2px;
+  height:0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #444;
+}
+.container div:hover::before, .container div:hover::after{
+  width: 100%;
+}
+.container div:hover span::before, .container div:hover span::after{
+  height: 100%;
+}
+/*----- button 5 -----*/
+.btn-5::after{
+  left:0;
+  bottom: 0;
+ 
+}
+.btn-5 span::after{
+  right:0;
+  top: 0;
+  
+}
+.btn-5::before{
+  right:0;
+  top: 0;
+  
+}
+.btn-5 span::before{
+  left: 0;
+  bottom: 0;
+ 
+}
+    </style>
+  </head>
+  <body>
+      <div class="container">
+   
+          <div class="btn-5"><span><img src="i1" width=330px; height=250px;></span></button>
+        </div>
+    </body>
+</html>

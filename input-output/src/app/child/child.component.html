@@ -1,0 +1,35 @@
+<!-- <div >{{sendData}}</div>  -->
+<!-- <input type="text" #ccomponent (keyup)="onChange(ccomponent.value)"/> -->
+
+
+<div class="modal fade" id="myModal" role="Add and Remove note" >   
+        <div class="modal-dialog">    
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Message
+                <button class="btn" (click)="onLinkedClicked()" data-dismiss="modal" aria-hidden="true">Accept</button>
+                <button class="btn" (click)="unCheckClicked()" data-dismiss="modal" aria-hidden="true">Reject</button>
+              </div>
+             
+            </div>
+            <div class="modal-body" >
+                <div>From: {{data[sendData].From}}</div>
+                <div>To: {{data[sendData].To}}</div>
+                <hr>
+                
+                <div>
+                    <h3>{{data[sendData].title}}</h3><br>
+                  Dear Ramya,<br><br>
+                  <div style="padding-left:40px">{{data[sendData].content}}</div>
+                  <br><br> <div>Regards,</div>
+                  <div style="padding-left:10px">{{data[sendData].Regards}}</div>
+                </div>
+              </div>
+            <div class="modal-footer">
+                <button  class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            </div>
+            </div>        
+          </div>
+        </div>
+    

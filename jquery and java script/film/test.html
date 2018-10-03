@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Bin</title>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+   
+  <script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.js">
+  </script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.css">
+  <script>
+   $(document).ready(function () {
+        $('#table_id').dataTable({
+    "scrollY": "50vh",
+    "scrollCollapse": true,
+  });
+  $('.dataTables_length').addClass('bs-select');
+});
+  </script>
+</head>
+<body>
+  <table id="table_id" 
+
+  class="table table-condensed table-striped table-hover">
+      <thead>
+          <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th >SUBJECT</th>
+            <th>ACTOR</th>
+            <th>ACTRESS</th>
+            <th >POPULARITY</th>
+          </tr>
+      </thead>
+  
+      <tbody>
+                  
+        <tr><td>1</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Tie Me Up! Tie Me Down!</td><td>Comedy</td><td>Banderas, Antonio</td><td>Abril, Victoria</td><td>68</td></tr><tr><td>2</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">High Heels</td><td>Comedy</td><td>Bosï¿½, Miguel</td><td>Abril, Victoria</td><td>68</td></tr><tr><td>3</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Dead Zone, The</td><td>Horror</td><td>Walken, Christopher</td><td>Adams, Brooke</td><td>79</td></tr><tr><td>4</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Cuba</td><td>Action</td><td>Connery, Sean</td><td>Adams, Brooke</td><td>6</td></tr><tr><td>5</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Days of Heaven</td><td>Drama</td><td>Gere, Richard</td><td>Adams, Brooke</td><td>14</td></tr><tr><td>6</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Octopussy</td><td>Action</td><td>Moore, Roger</td><td>Adams, Maud</td><td>68</td></tr><tr><td>7</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Target Eagle</td><td>Action</td><td>Connors, Chuck</td><td>Adams, Maud</td><td>14</td></tr><tr><td>8</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">American Angels: Baptism of Blood, The</td><td>Drama</td><td>Bergen, Robert D.</td><td>Adams, Trudy</td><td>28</td></tr><tr><td>9</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Subway</td><td>Drama</td><td>Lambert, Christopher</td><td>Adjani, Isabelle</td><td>6</td></tr><tr><td>10</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Camille Claudel</td><td>Drama</td><td>Depardieu</td><td>Adjani, Isabelle</td><td>32</td></tr><tr><td>11</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Fanny and Alexander</td><td>Drama</td><td>Ahlstedt Brje</td><td>Adolphson, Kristina</td><td>81</td></tr><tr><td>12</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Tragedy of a Ridiculous Man</td><td>Drama</td><td>Tognazzi, Ugo</td><td>Aimee, Anouk</td><td>17</td></tr><tr><td>13</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">A Man &amp; a Woman</td><td>Drama</td><td>Trintignant, Jean-Louis</td><td>Aimee, Anouk</td><td>46</td></tr><tr><td>14</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">A Man &amp; a Woman: Twenty Years Later</td><td>Drama</td><td>Trintignant, Jean-Louis</td><td>Aimee, Anouk</td><td>49</td></tr><tr><td>15</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Un Hombre y una Mujer</td><td>Drama</td><td>Trintignant, Jean-Louis</td><td>Aimee, Anouk</td><td>6</td></tr><tr><td>16</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Official Story, The</td><td>Drama</td><td>Alterio, Hector</td><td>Aleandro, Norma</td><td>39</td></tr><tr><td>17</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Lindbergh Kidnapping Case, The</td><td>Drama</td><td>Hopkins, Anthony</td><td>Alexander, Denise</td><td>51</td></tr><tr><td>18</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Blackmail</td><td>Mystery</td><td>Longden, John</td><td>Algood, Sara</td><td>2</td></tr><tr><td>19</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Donovan's Reef</td><td>Comedy</td><td>Wayne, John</td><td>Allen, Elizabeth</td><td>62</td></tr><tr><td>20</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Tucker: The Man &amp; His Dream</td><td>Drama</td><td>Bridges, Jeff</td><td>Allen, Joan</td><td>68</td></tr><tr><td>21</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Scrooged</td><td>Comedy</td><td>Murray, Bill</td><td>Allen, Karen</td><td>15</td></tr><tr><td>22</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Raiders of the Lost Ark</td><td>Action</td><td>Ford, Harrison</td><td>Allen, Karen</td><td>8</td></tr><tr><td>23</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Running Man, The</td><td>Science Fiction</td><td>Schwarzenegger, Arnold</td><td>Alonso, Maria Conchita</td><td>31</td></tr><tr><td>24</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Predator 2</td><td>Action</td><td>Glover, Danny</td><td>Alonso, Maria Conchita</td><td>79</td></tr><tr><td>25</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Colors</td><td>Drama</td><td>Penn, Sean</td><td>Alonso, Maria Conchita</td><td>23</td></tr><tr><td>26</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Zandalee</td><td>Drama</td><td>Cage, Nicolas</td><td>Anderson, Erika</td><td>80</td></tr><tr><td>27</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Miles from Home</td><td>Drama</td><td>Anderson, Kevin</td><td>Anderson, Jo</td><td>53</td></tr><tr><td>28</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Happy Birthday to Me</td><td>Horror</td><td>Ford, Glenn</td><td>Anderson, Melissa Sue</td><td>88</td></tr><tr><td>29</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Final Notice</td><td>Mystery</td><td>Gerard, Gil</td><td>Anderson, Melody</td><td>88</td></tr><tr><td>30</td><td class="cell-which-triggers-popup" data-toggle="popover" data-original-title="" title="">Quintet</td><td>Drama</td><td>Newman, Paul</td><td>Andersson, Bibi</td><td>19</td></tr>
+      </tbody>
+  </table>
+</body>
+</html>
