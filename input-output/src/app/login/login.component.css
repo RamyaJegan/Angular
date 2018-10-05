@@ -1,0 +1,36 @@
+body{
+    background-color: white !important;
+}
+table{
+    text-align: center;
+    margin:10% 0% 0% 40%;
+    /* border:1px solid #ddd; */
+    border-radius:10px;
+    background-color: #ffffff;
+}
+thead{
+    border-bottom:1px solid #ddd;
+    /* padding:10px; */
+
+}
+th,td{
+    padding:10px;
+}
+button{
+    margin-left:0px;
+    background-color: rgb(52, 52, 194);
+    outline:none;
+    border: rgb(52, 52, 194);
+    color:white;
+    border-radius:5px;
+    padding:10px;
+}
+.no_pad{
+    padding:0px !important;
+}
+span{
+    display: none;
+    color: red;
+    font-size: 12px;
+    text-align: center;
+}

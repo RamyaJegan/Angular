@@ -1,0 +1,30 @@
+<router-outlet></router-outlet>
+<table id="Login">
+  <thead>
+    <th colspan=2>Login</th>
+  </thead>
+  <tbody>
+    <tr><td>USERNAME:</td><td><input type="email" [(ngModel)] = 'login_item.user'/><br>
+      <span id="val1">Please, Enter Username to Login</span></td></tr>
+    <tr><td>PASSWORD:</td><td><input type="password" [(ngModel)] = 'login_item.pass'/><br>
+      <span id="val2">Please, Enter Password to Login</span></td></tr>
+    <tr><td colspan=2><button (click)="Login(login_item)">Login</button></td></tr>
+    <tr><td colspan=2 class="no_pad"><a href="#Register" (click)="gotoReg()">Sign up</a></td></tr>
+  </tbody>
+</table>
+<table id="Register" style="display:none;">
+  <thead>
+    <th colspan=2>Login</th>
+  </thead>
+  <tbody>
+    <tr><td>USERNAME:</td>
+      <td><input type="email" [(ngModel)] = 'login_item.user'/><br>
+          <span id="val3">Please,Enter Username to Register</span>
+      </td>      
+    </tr>
+    <tr><td>PASSWORD:</td><td><input type="password" [(ngModel)] = 'login_item.pass'/><br>
+      <span id="val4">Please, Enter Password to Register</span></td></tr>
+    <tr><td colspan=2><button (click)="Register(login_item)">Register</button></td></tr>
+    <tr><td colspan=2 class="no_pad"><a href="#Login" (click)="gotoLog()">Already Having account Sign In</a></td></tr>
+  </tbody>
+</table>
